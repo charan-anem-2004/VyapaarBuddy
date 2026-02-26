@@ -43,11 +43,11 @@ app.use('/api/transactions', require('./routes/transaction'));
 app.use('/api/items', itemRoutes);
 app.use('/api/invoice-settings', invoiceSettingsRoutes);
 app.use('/api/logo', logoUploadRoutes);
-app.use('/uploads', express.static('uploads')); // Serve logos
+app.use('/uploads', express.static('uploads'));
 
 const axios = require("axios");
 
-// Replace with your actual Render URL
+
 const SELF_URL = "https://vyapaarbuddy.onrender.com";
 
 setInterval(() => {
@@ -59,12 +59,12 @@ setInterval(() => {
     .catch((err) => {
       console.log("Self ping failed", err.message);
     });
-}, 2 * 60 * 1000); // two minutes
+}, 2 * 60 * 1000); 
 
 
 
 
-// Start server only after DB is connected
+
 const startServer = async () => {
   try {
     await connectDB();
