@@ -15,7 +15,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://127.0.0.1:3000",
   "https://vyapaarbuddy.store",
-  "https://vyapaarbuddy-1.onrender.com"
+  "https://vyapaarbuddy-1.onrender.com/*"
 ]
 
 app.use(cors({
